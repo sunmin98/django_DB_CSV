@@ -1,0 +1,25 @@
+<html>
+  <head><title>Hello World</title></head>
+  <body>
+  {% block content %}
+  <a href="{% url 'post_create' %}">Create Blog Post</a>
+
+
+
+    {% for post in posts %}
+    <!--  blog/view.py에서 전달한 posts 데이터 리스트에서 post로 데이터를 가져오는 반복문 생성 시작  -->
+      <a href="{% url 'post_detail' id=post.id %}">
+    <!--  전체의 url파일에서 post_detail이라는 이름을 찾아 해당 URL로 변경하나고 id라는 파라메터를 만들어 post의 id를 넣어준다      -->
+    <div>
+
+
+        {{ post.title }}<small>(published: {{ post.published_at }})</small>
+                    <!--   post 데이터의 title / published_at 필드값을 표시합니다.     -->
+      <p>{{ post.content | linebreaksbr }}</p>
+              <!--   우리가 가지고있는 context필드 값을 가져와 \n을  <br/>(줄바꿈 태그)으로 변환해 표시     -->
+    </div>
+    {% endfor %}
+          {% endblock %}
+<!--  반복문 종료  -->
+  </body>
+</html>

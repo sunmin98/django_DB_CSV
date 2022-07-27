@@ -1,0 +1,13 @@
+
+    <a href="{% url 'posts' %}">
+        Post List
+    </a>
+    <h1>Create Blog post</h1>
+    <form method="POST">
+        {% csrf_token %}
+<!--  CSRF막는거    -->
+        {{ form.as_p }}
+<!--  뷰로 전달 받을 파라메터 form으로 단락형식으로 표시
+        이걸로 form클래스에서 지정한 filed를 표시함-->
+        <button type="submit">Save</button>
+    </form>

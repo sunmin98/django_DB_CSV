@@ -1,0 +1,10 @@
+asgiref==3.5.2
+Django==4.0.6
+pip==22.1.2
+PyMySQL==1.0.2
+setuptools==57.0.0
+sqlparse==0.4.2
+wheel==0.36.2
+
+[notice] A new release of pip available: 22.1.2 -> 22.2.1
+[notice] To update, run: pip install --upgrade pip

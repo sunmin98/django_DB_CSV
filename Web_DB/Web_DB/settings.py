@@ -27,7 +27,14 @@ SECRET_KEY = '*-%d9tx!dp1j=89l9)0gx25@xz!0vu-xq-(^qe*%09=4ypab9='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '0.0.0.0'
+    'localhost'
+    '127.0.0.1'
+    'ec2-43-200-166-194.ap-northeast-2.compute.amazonaws.com'
+    '43.200.166.194'
+
+]
 
 
 # Application definition
@@ -82,7 +89,7 @@ DATABASES = {
         'NAME': 'Django_BASE',
         'USER': 'root',
         'PASSWORD': 'tjsals6092',
-        'HOST': 'localhost',
+        'HOST': '210.119.105.214',
         'PORT': '3306',
         "OPTIONS": {"charset": "utf8mb4"},
     }

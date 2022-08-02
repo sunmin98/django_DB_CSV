@@ -28,11 +28,12 @@ SECRET_KEY = '*-%d9tx!dp1j=89l9)0gx25@xz!0vu-xq-(^qe*%09=4ypab9='
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '0.0.0.0'
-    'localhost'
-    '127.0.0.1'
-    'ec2-43-200-166-194.ap-northeast-2.compute.amazonaws.com'
-    '43.200.166.194'
+
+    '127.0.0.1:8000',
+    '127.0.0.1',
+    '3.34.88.164',
+    'ec2-3-34-88-164.ap-northeast-2.compute.amazonaws.com:8000',
+    '210.119.105.214:8000',
 
 ]
 
@@ -87,7 +88,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Django_BASE',
-        'USER': 'root',
+        'USER': 'admin',
         'PASSWORD': 'tjsals6092',
         'HOST': '210.119.105.214',
         'PORT': '3306',
